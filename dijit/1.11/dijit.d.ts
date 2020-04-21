@@ -1104,7 +1104,7 @@ declare namespace dijit {
 		 * Track specified handles and remove/destroy them when this instance is destroyed, unless they were
 		 * already removed/destroyed manually.
 		 */
-		own(...args: any[]): any[];
+		own<T extends Destroyable[]>(...handles: T): T;
 	}
 
 	/**
